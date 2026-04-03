@@ -1,4 +1,4 @@
-﻿
+
 import os
 from dotenv import load_dotenv
 from vanna import Agent
@@ -15,7 +15,7 @@ load_dotenv()
 def create_agent():
     llm_service = GeminiLlmService(
         api_key=os.getenv('GOOGLE_API_KEY'),
-        model='gemini-2.5-flash'
+        model='gemini-2.0-flash'
     )
     print('LLM Service created!')
     db_runner = SqliteRunner(database_path='clinic.db')
